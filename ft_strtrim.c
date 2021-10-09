@@ -9,36 +9,39 @@
 /*   Updated: 2021/10/07 19:58:54 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h>
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*p;
 	int		i;
 	int		j;
+	int		k;
 
 	while (s1[i] != '\0')
 		i++;
-	p = malloc(i);
+	p = malloc(i + 1);
 	if (p == NULL)
 		return ((void *)0);
-	i = 0;
 	j = 0;
-	while (s1[j] == set[0])
+	while (s1[j] == *set)
 		j++;
 	i--;
-	while (s1[i] == set[0])
+	while (s1[i] == *set)
 		i--;
+	k = 0;
 	while (j <= i)
 	{
-		p[j] == s1[j];
+		p[k] = s1[j];
 		j++;
+		k++;
 	}
-	p[j] == '\0';
+	p[j] = '\0';
 	return (p);
 }
 /*int main()
 {
-	char a[60] = "1123sas1211";
-	char b = '1';
+	char a[7] = "112211";
+	char b[3] = "3";
 	printf("%s\n", ft_strtrim(a,b));
 }*/

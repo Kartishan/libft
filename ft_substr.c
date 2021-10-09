@@ -14,26 +14,32 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		i;
 	int		j;
-	char	*q;
 	char	*p;
 
 	i = 0;
-	q = s;
-	while (q[i] != '\0')
+	j = 0;
+	while (s[i] != '\0')
 		i++;
 	p = malloc(sizeof(char) * i + 1);
 	if (p == NULL)
 		return ((void *)0);
 	i = 0;
-	while (p[i] != start)
+	while (s[i] != start)
 		i++;
 	if (s[i] == start)
 	{
-		while (p[i] != '\0')
+		while (s[i] != '\0')
 		{
-			q[j] == p[i];
+			p[j] = s[i];
+			j++;
 			i++;
 		}
 	}
-	return (q);
+	return (p);
 }
+/*int main()
+{
+	char a[5] = "123";
+	char b = '4';
+	printf("%s\n", ft_substr(a,b,6));
+}*/

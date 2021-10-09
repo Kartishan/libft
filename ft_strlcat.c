@@ -6,12 +6,12 @@
 /*   By: pwildcat <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:47:07 by pwildcat          #+#    #+#             */
-/*   Updated: 2021/10/05 16:47:08 by pwildcat         ###   ########.fr       */
+/*   Updated: 2021/10/09 17:27:32 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 
-size_t	*ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
 	int	j;

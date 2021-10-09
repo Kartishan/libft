@@ -1,25 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwildcat <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 17:26:45 by pwildcat          #+#    #+#             */
-/*   Updated: 2021/10/09 17:26:53 by pwildcat         ###   ########.fr       */
+/*   Created: 2021/10/09 17:27:18 by pwildcat          #+#    #+#             */
+/*   Updated: 2021/10/09 17:27:19 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char	*p;
+	int	i;
 
-	p = s;
-	while (n > 0)
+	i = 0;
+	while (src[i] != '\0' && dstsize > 0)
 	{
-		*p++ = 0;
-		n--;
+		dst[i] = src[i];
+		i++;
+		dstsize--;
 	}
-	return (p);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		i++;
+	}
+	if (dstsize != 0)
+	{
+		dst[i] = '\0';
+	}
+	return (i);
 }
+
+/*int main()
+{
+    char a[4] = "2222";
+    char b[9]="111111111";
+    printf("%d\n",ft_strlcpy(a,b,3));
+    printf("%d\n",strlcpy(a,b,3));
+}*/

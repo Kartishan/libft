@@ -6,15 +6,15 @@
 /*   By: pwildcat <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:39:50 by pwildcat          #+#    #+#             */
-/*   Updated: 2021/10/06 14:39:52 by pwildcat         ###   ########.fr       */
+/*   Updated: 2021/10/09 17:26:17 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int		c;
-	int		i;
-	int		n;
+	long int		c;
+	long int		i;
+	long int		n;
 
 	c = 0;
 	i = 0;
