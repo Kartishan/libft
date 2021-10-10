@@ -9,7 +9,7 @@
 /*   Updated: 2021/10/05 15:56:02 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include  "libft.h"
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c && *s)
@@ -25,4 +25,4 @@ char	*ft_strchr(const char *s, int c)
 	char a[10] = "aacaaaa";
 	printf("%s\n", ft_strchr(a,'r'));
 	printf("%s\n", strchr(a,'r'));
-	}*/
+}*/

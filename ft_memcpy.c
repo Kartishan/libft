@@ -9,16 +9,17 @@
 /*   Updated: 2021/10/05 14:42:02 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include  "libft.h"
 #include <stdlib.h>
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*p;
 	char	*q;
-	int		i;
 
 	p = (char *) dst;
 	q = (char *) src;
+	if (!dst && !src)
+		return (dst);
 	while (n > 0)
 	{
 		*p++ = *q++;

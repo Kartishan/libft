@@ -9,9 +9,9 @@
 /*   Updated: 2021/10/09 12:42:52 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include  "libft.h"
 #include <stdlib.h>
-char	**ft_split(char const *s, char c)
+/*char	**ft_split(char const *s, char c)
 {
 	int		i;
 	char	*p;
@@ -32,7 +32,7 @@ char	**ft_split(char const *s, char c)
 	}
 	free(p);
 	return (p);
-}
+}*/
 /*int main()
 {
 	char a[]= "aba baba kak";

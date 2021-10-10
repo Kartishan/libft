@@ -9,20 +9,8 @@
 /*   Updated: 2021/10/07 18:58:59 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include  "libft.h"
 #include <stdlib.h>
-void	*ft_bzero(void *buf, int n)
-{
-	char	*p;
-
-	p = buf;
-	while (n > 0)
-	{
-		*p++ = 0;
-		n--;
-	}
-	return (p);
-}
-
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*p;

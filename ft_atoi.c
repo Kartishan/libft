@@ -9,6 +9,7 @@
 /*   Updated: 2021/10/09 17:26:17 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include  "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -21,10 +22,11 @@ int	ft_atoi(const char *str)
 	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
 		|| str[i] == '\r' || str[i] == ' ')
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
+		if (str[i] == '-')
+			n = 1;
 		i++;
-		n = 1;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
@@ -37,9 +39,9 @@ int	ft_atoi(const char *str)
 	return (c);
 }
 
-/*int main()
+/**int main()
 {
-	char a[] = {' ', ' ', '-', '2', '3'};
+	char a[10] ="+548";
 	printf("%d\n", ft_atoi(a));
 	printf("%d\n", atoi(a));
 }*/

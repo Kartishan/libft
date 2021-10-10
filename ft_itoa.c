@@ -9,6 +9,7 @@
 /*   Updated: 2021/10/09 13:06:04 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include  "libft.h"
 #include <stdlib.h>
 char	*ft_putnbr(int n, char *p, int negative)
 {
@@ -44,6 +45,7 @@ char	*ft_itoa(int n)
 	char		*p;
 	int			negative;
 
+	i = 0;
 	if (n < 0)
 	{
 		n = n * -1;
@@ -54,7 +56,7 @@ char	*ft_itoa(int n)
 	p = malloc(sizeof(int) * 1 + 1);
 	if (p == NULL)
 		return ((void *)0);
-	p = ft_putnbr(n, *p, negative);
+	p = ft_putnbr(n, p, negative);
 	return (p);
 }
 

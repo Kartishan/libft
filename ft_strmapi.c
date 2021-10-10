@@ -9,12 +9,14 @@
 /*   Updated: 2021/10/09 14:51:03 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include  "libft.h"
 #include <stdlib.h>
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
 	char	*p;
 
+	i = 0;
 	while (s[i] != '\0')
 	{
 		i++;

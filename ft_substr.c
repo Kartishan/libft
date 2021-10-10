@@ -9,8 +9,9 @@
 /*   Updated: 2021/10/07 18:28:28 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include  "libft.h"
 #include <stdlib.h>
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+/*char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		i;
 	int		j;
@@ -36,7 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		}
 	}
 	return (p);
-}
+}*/
 /*int main()
 {
 	char a[5] = "123";

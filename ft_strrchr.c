@@ -10,13 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include  "libft.h"
 char	*ft_strrchr(const char *s, int c)
 {
-	while (*s != (char)c && *s)
+	int		i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	while (i >= 0)
 	{
-		s--;
+		if (*(s + i) == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	if (*s == c)
-		return ((char *)s);
 	return ((void *)0);
 }
+/*int main()
+{
+	char a[10] = "aacaaaa";
+	printf("%s\n", ft_strrchr(a,'a'));
+	printf("%s\n", strrchr(a,'a'));
+}*/

@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include  "libft.h"
 #include <stdlib.h>
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -18,6 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	int		k;
 
+	i = 0;
 	while (s1[i] != '\0')
 		i++;
 	p = malloc(i + 1);
@@ -36,12 +38,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j++;
 		k++;
 	}
-	p[j] = '\0';
 	return (p);
 }
 /*int main()
 {
 	char a[7] = "112211";
-	char b[3] = "3";
+	char b[3] = "1";
 	printf("%s\n", ft_strtrim(a,b));
 }*/

@@ -9,22 +9,32 @@
 /*   Updated: 2021/10/09 16:36:30 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include  "libft.h"
 #include <stdlib.h>
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*p;
-	char	*q;
-	int		i;
+	unsigned char	*p;
+	unsigned char	*q;
 
-	p = (char *) dst;
-	q = (char *) src;
+	p = (unsigned char *) dst;
+	q = (unsigned char *) src;
 	if (!dst && !src)
 		return (dst);
-	while (len > 0)
+	if (p > q)
 	{
-		*p++ = *q++;
-		len--;
+		while (len-- > 0)
+		{
+			p[len] = q[len];
+		}
+		return (dst);
+	}
+	else
+	{
+		while (len > 0)
+		{
+			*p++ = *q++;
+			len--;
+		}
 	}
 	return (dst);
 }
@@ -34,5 +44,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
     char b[10] = "444";
 	printf("%s\n",ft_memmove(a,b,10));
 	printf("%s\n",memmove(a,b,10));
-
 }*/

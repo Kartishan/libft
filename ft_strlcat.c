@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-
+#include  "libft.h"
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
-	int	j;
-	int	s;
-	int	c;
+	unsigned int	i;
+	int				j;
+	int				s;
+	unsigned int	c;
 
 	i = 0;
 	j = 0;
@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		j++;
 	s += j;
 	j = 0;
-	while (dstsize - 1 > i && src[j] != '\0')
+	while (dstsize - 1 > i && src[j] != '\0' && dstsize != 0)
 	{
 		dst[i++] = src[j++];
 	}
@@ -43,10 +43,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
     char a[10] = "222222";
     char b[10]="111111111";
-    printf("%d\n",ft_strlcat(a,b,10));
+    printf("%d\n",ft_strlcat(a,b,0));
 	printf("%s\n",a);
 	char a2[10] = "222222";
 	char b2[10] ="111111111";
-    printf("%d\n",strlcat(a2,b2,10));
+    printf("%d\n",strlcat(a2,b2,0));
 	printf("%s\n",a2);
 }*/

@@ -9,8 +9,7 @@
 /*   Updated: 2021/10/09 17:26:53 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
+#include  "libft.h"
 void	ft_bzero(void *s, size_t n)
 {
 	char	*p;
@@ -21,5 +20,4 @@ void	ft_bzero(void *s, size_t n)
 		*p++ = 0;
 		n--;
 	}
-	return (p);
 }
