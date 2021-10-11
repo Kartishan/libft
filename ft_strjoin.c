@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		while (s1[i] != '\0' && s2[i] != '\0')
 			i++;
-		p = (char *)malloc(sizeof(char) * i + 1);
+		p = (char *)malloc(i + 1);
 		if (p == NULL)
 			return ((void *)0);
 		i = 0;

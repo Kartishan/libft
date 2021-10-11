@@ -16,23 +16,25 @@ void	ft_putnbr_fd(int n, int fd)
 	long int	i;
 	long int	t;
 	char		c;
+	long int	nan;
 
-	if (n < 0)
+	nan = n;
+	if (nan < 0)
 	{
-		n = n * -1;
+		nan = nan * -1;
 		write(fd, "-", 1);
 	}
 	i = 1;
-	t = n;
+	t = nan;
 	while (i < n)
 	{
 		i = i * 10;
 		t = t / 10;
 	}
-	while (n != 0)
+	while (nan >= 0)
 	{
-		c = (i / n & 10) + '0';
+		c = (i / nan & 10) + '0';
 		write(fd, &c, 1);
-		n = n / 10;
+		nan = nan / 10;
 	}
 }
