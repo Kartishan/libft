@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include  "libft.h"
-#include <stdlib.h>
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*p;
@@ -19,5 +18,5 @@ void	*ft_calloc(size_t count, size_t size)
 	if (p == NULL)
 		return ((void *)0);
 	ft_bzero(p, count * size);
-	return (p);
+	return ((void *)p);
 }

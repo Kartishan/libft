@@ -10,7 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include  "libft.h"
-#include <stdlib.h>
+int	ft_count(long int nan)
+{
+	int	i;
+
+	i = 0;
+	while (nan != 0)
+	{
+		nan /= 10;
+		i++;
+	}
+	return (i);
+}
+
 char	*ft_putnbr(long int n, char *p, int negative)
 {
 	long int	k;
@@ -18,7 +30,7 @@ char	*ft_putnbr(long int n, char *p, int negative)
 	long int	i;
 
 	i = 0;
-	if (negative == 1)
+	if (negative == -1)
 	{
 		p[i] = '-';
 		i++;
@@ -30,10 +42,10 @@ char	*ft_putnbr(long int n, char *p, int negative)
 		k = k * 10;
 		power = power / 10;
 	}
-	while (k > 0)
+	while (k != 0)
 	{
 		p[i] = (n / k % 10) + '0';
-		k = k / 10;
+		k /= 10;
 		i++;
 	}
 	p[i] = '\0';
@@ -49,41 +61,20 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	nan = n;
-	if (n < 0)
+	negative = 0;
+	i = ft_count(nan);
+	if (nan < 0)
 	{
 		nan = nan * -1;
-		negative = 1;
+		negative = -1;
+		i++;
 	}
-	p = malloc(sizeof(nan));
+	if (nan == 0)
+		p = malloc(sizeof(char) + 1);
+	else
+		p = malloc(i + 1);
 	if (p == NULL)
 		return ((void *)0);
 	p = ft_putnbr(nan, p, negative);
 	return (p);
 }
-
-/*int main()
-{
-	printf("%s\n", ft_itoa(156));
-	char s1[3] = "156";
-	if (s1 == ft_itoa(156));
-	{
-		printf("Тест 1, все не ок %s\n");
-	}
-	//char *i1 = ft_itoa(-623);
-	//char *i2 = ft_itoa(156);
-	//char *i3 = ft_itoa(-0);
-
-	if (strcmp(i1, "-623"))
-	{
-		printf("Тест 1, все не ок%s\n");
-	}
-	if (strcmp(i2, "156"))
-	{
-		printf("Тест 2, все не ок%s\n");
-	}
-	if (strcmp("0", i3))
-	{
-		printf("Тест 3, все не ок%s\n");
-	}
-	
-}*/

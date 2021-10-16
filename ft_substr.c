@@ -11,33 +11,33 @@
 /* ************************************************************************** */
 #include  "libft.h"
 #include <stdlib.h>
-/*char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	int		j;
-	char	*p;
+	unsigned int	i;
+	size_t			j;
+	char			*p;
 
-	i = 0;
 	j = 0;
-	while (s[i] != '\0')
-		i++;
-	p = malloc(sizeof(char) * i + 1);
+	if (!s && !start)
+		return (NULL);
+	p = malloc(sizeof(char) * (len + 1));
 	if (p == NULL)
 		return ((void *)0);
 	i = 0;
-	while (s[i] != start)
-		i++;
-	if (s[i] == start)
+	if (ft_strlen(s) >= start)
 	{
-		while (s[i] != '\0')
+		while (i < start)
+			i++;
+		while (j < len && s[i] != '\0')
 		{
 			p[j] = s[i];
 			j++;
 			i++;
 		}
 	}
+	p[j] = '\0';
 	return (p);
-}*/
+}
 /*int main()
 {
 	char a[5] = "123";

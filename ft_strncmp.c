@@ -30,7 +30,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 /*int main()
 {
-	char a[10] = "AB ";
+	char a[10] = "";
     char b[10] = "ABA";
     printf("%d\n",ft_strncmp(a,b,2));
 	printf("%d\n",strncmp(a,b,2));

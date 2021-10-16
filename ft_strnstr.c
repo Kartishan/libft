@@ -19,7 +19,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	unsigned int	j;
 
 	i = 0;
-	j = 0;
 	if (needle[i] == '\0')
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && len > 0)
@@ -41,7 +40,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 /*int	main()
 {
 	char a[30]= "lorem ipsum dolor sit amet";
-	char b[40]= "ipsumm";
-	printf("%s\n", ft_strnstr(a,b,30));
-	printf("%s\n", strnstr(a,b,30));
+	char b[40]= "ipsum";
+	printf("%s\n", ft_strnstr(a,b,15));
+	printf("%s\n", strnstr(a,b,15));
 }*/

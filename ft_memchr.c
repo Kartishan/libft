@@ -25,11 +25,3 @@ char	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-/*int main()
-{
-	char a[4]={85,128,90};
-	char c = 128;
-	printf("%s\n", ft_memchr(a,c,-3));
-	printf("%s\n", memchr(a,c,-3));
-}
-*/

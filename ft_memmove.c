@@ -22,11 +22,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (dst);
 	if (p > q)
 	{
-		while (len-- > 0)
+		while (len > 0)
 		{
+			len--;
 			p[len] = q[len];
 		}
-		return (dst);
 	}
 	else
 	{

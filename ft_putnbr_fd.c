@@ -13,8 +13,8 @@
 #include <unistd.h>
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int	i;
 	long int	t;
+	long int	nb;
 	char		c;
 	long int	nan;
 
@@ -24,17 +24,23 @@ void	ft_putnbr_fd(int n, int fd)
 		nan = nan * -1;
 		write(fd, "-", 1);
 	}
-	i = 1;
+	nb = 1;
 	t = nan;
-	while (i < n)
-	{
-		i = i * 10;
-		t = t / 10;
+	while (t > 9)
+	{	
+		nb *= 10;
+		t /= 10;
 	}
-	while (nan >= 0)
+	while (nb != 0)
 	{
-		c = (i / nan & 10) + '0';
+		t = nan / nb % 10;
+		c = t + '0';
 		write(fd, &c, 1);
-		nan = nan / 10;
+		nb /= 10;
 	}
 }
+/*int main()
+{
+    ft_putnbr_fd(0,1);
+    return (0);
+}*/
