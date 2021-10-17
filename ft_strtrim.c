@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include  "libft.h"
+
 int	ft_isspace(int i, char const *str)
 {
 	if (i == 0)
@@ -95,10 +96,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = ft_start(s1, set);
 	j = ft_end(s1, set);
 	if (j - i < 0)
-	{
 		j = i;
-		j += 1;
-	}
 	p = malloc((j - i) + 2);
 	if (p == NULL)
 		return (NULL);

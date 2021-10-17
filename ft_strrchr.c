@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include  "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
@@ -26,9 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return ((void *)0);
 }
-/*int main()
-{
-	char a[10] = "aacaaaa";
-	printf("%s\n", ft_strrchr(a,'a'));
-	printf("%s\n", strrchr(a,'a'));
-}*/

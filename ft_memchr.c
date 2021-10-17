@@ -9,8 +9,9 @@
 /*   Updated: 2021/10/05 17:56:16 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
-#include <stdlib.h>
+
 char	*ft_memchr(const void *s, int c, size_t n)
 {
 	char	*p;
@@ -18,7 +19,7 @@ char	*ft_memchr(const void *s, int c, size_t n)
 	p = (char *)s;
 	while (n > 0)
 	{
-		if (*p == c)
+		if (*p == (char)c)
 			return (p);
 		p++;
 		n--;

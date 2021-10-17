@@ -9,13 +9,14 @@
 /*   Updated: 2021/10/09 17:27:32 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include  "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
-	int				j;
-	int				s;
+	size_t			j;
+	size_t			s;
 	unsigned int	c;
 
 	i = 0;
@@ -38,15 +39,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (s);
 }
-
-/*int main()
-{
-    char a[10] = "222222";
-    char b[10]="111111111";
-    printf("%d\n",ft_strlcat(a,b,0));
-	printf("%s\n",a);
-	char a2[10] = "222222";
-	char b2[10] ="111111111";
-    printf("%d\n",strlcat(a2,b2,0));
-	printf("%s\n",a2);
-}*/

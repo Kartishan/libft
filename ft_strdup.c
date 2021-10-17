@@ -9,8 +9,9 @@
 /*   Updated: 2021/10/07 17:53:11 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
-#include <stdlib.h>
+
 char	*ft_strdup(const char *s1)
 {
 	int		i;
@@ -31,10 +32,3 @@ char	*ft_strdup(const char *s1)
 	p[i] = '\0';
 	return (p);
 }
-
-/*int main()
-{
-	char a[50] = "123sda";
-	printf("%d\n", ft_strdup(a));
-	printf("%d\n", strdup(a));
-}*/

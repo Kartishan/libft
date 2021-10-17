@@ -9,8 +9,9 @@
 /*   Updated: 2021/10/09 16:36:30 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
-#include <stdlib.h>
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*p;
@@ -38,10 +39,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*int main()
-{
-	char a[10] = "22222222";
-    char b[10] = "444";
-	printf("%s\n",ft_memmove(a,b,10));
-	printf("%s\n",memmove(a,b,10));
-}*/

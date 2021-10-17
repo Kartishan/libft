@@ -9,10 +9,12 @@
 /*   Updated: 2021/10/09 17:27:39 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
+
 size_t	ft_strlen(const char *c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (c[i] != '\0')

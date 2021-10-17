@@ -9,8 +9,29 @@
 /*   Updated: 2021/10/07 18:28:28 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
-#include <stdlib.h>
+
+int	ft_countmemory(char const *s, unsigned int start, size_t len)
+{
+	unsigned int	i;
+	size_t			j;
+
+	j = 0;
+	i = 0;
+	if (ft_strlen(s) >= start)
+	{
+		while (i < start)
+			i++;
+		while (j < len && s[i] != '\0')
+		{
+			j++;
+			i++;
+		}
+	}
+	return (j);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
@@ -20,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	j = 0;
 	if (!s && !start)
 		return (NULL);
-	p = malloc(sizeof(char) * (len + 1));
+	p = malloc(sizeof(char) * (ft_countmemory(s, start, len) + 1));
 	if (p == NULL)
 		return ((void *)0);
 	i = 0;
@@ -38,9 +59,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p[j] = '\0';
 	return (p);
 }
-/*int main()
-{
-	char a[5] = "123";
-	char b = '4';
-	printf("%s\n", ft_substr(a,b,6));
-}*/

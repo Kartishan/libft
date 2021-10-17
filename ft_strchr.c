@@ -9,20 +9,16 @@
 /*   Updated: 2021/10/05 15:56:02 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c && *s)
 	{
 		s++;
 	}
-	if (*s == c)
+	if (*s == (char)c)
 		return ((char *)s);
 	return ((void *)0);
 }
-/*int main()
-{
-	char a[10] = "aacaaaa";
-	printf("%s\n", ft_strchr(a,'r'));
-	printf("%s\n", strchr(a,'r'));
-}*/

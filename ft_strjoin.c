@@ -9,8 +9,9 @@
 /*   Updated: 2021/10/07 19:27:53 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
-#include <stdlib.h>
+
 int	ft_len(char const *s1, const char *s2)
 {
 	int	i;
@@ -51,11 +52,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[i] = '\0';
 	return (p);
 }
-
-/*int main()
-{
-	char *s1 = "my favorite animal is";
-	char *s2 = " ";
-	char *s3 = "the nyancat";
-	char *res = ft_strjoin(ft_strjoin(s1, s2), s3);
-}*/

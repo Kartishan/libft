@@ -9,8 +9,9 @@
 /*   Updated: 2021/10/05 14:42:02 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
-#include <stdlib.h>
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*p;
@@ -27,10 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*int main()
-{
-	char a[10] = "222222";
-    char b[10] = "11111";
-    printf("%s\n",memcpy(a,b,2));
-	printf("%s\n",ft_memcpy(a,b,2));
-}*/

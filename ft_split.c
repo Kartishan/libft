@@ -9,8 +9,9 @@
 /*   Updated: 2021/10/09 12:42:52 by pwildcat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include  "libft.h"
-#include <stdlib.h>
+
 int	ft_countj(char const *s, char c)
 {
 	int	i;
@@ -44,11 +45,11 @@ char	**ft_memoryk(char **p, char const *s, char c)
 	while (j < u && s[i] != '\0')
 	{
 		k = 0;
-		while (s[i++] != c && s[i] != '\0')
-			k++;
 		while (s[i] == c && s[i] != '\0')
 			i++;
-		p[j] = malloc(sizeof(char *) * (k + 1));
+		while (s[i++] != c && s[i] != '\0')
+			k++;
+		p[j] = (char *)malloc(sizeof(char) * (k + 1));
 		if (p[j] == NULL)
 		{
 			while (p[--j] != 0)
