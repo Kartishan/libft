@@ -15,13 +15,15 @@
 int	ft_len(char const *s1, const char *s2)
 {
 	int	i;
+	int	j;
 
 	i = 0;
+	j = 0;
 	while (s1[i] != '\0')
 		i++;
-	while (s2[i] != '\0')
-		i++;
-	return (i);
+	while (s2[j] != '\0')
+		j++;
+	return (i + j);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)

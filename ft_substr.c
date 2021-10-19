@@ -39,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*p;
 
 	j = 0;
-	if (!s && !start)
+	if (!s)
 		return (NULL);
 	p = malloc(sizeof(char) * (ft_countmemory(s, start, len) + 1));
 	if (p == NULL)
